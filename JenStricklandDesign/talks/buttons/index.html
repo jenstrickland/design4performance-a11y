@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8 /> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Push My Buttons with CSS3</title>
+
+<!-- CSS -->
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="style.css"/>
+
+<!-- JAVASCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<header role="banner" id="intro">
+	<hgroup>
+		<h1><a href="index.html">Push My Buttons with CSS<span class="version">3</span></a></h1>
+			<h4>#bostonphp #jquerymobile #css3buttons</h4>
+	</hgroup>
+	<p class="attribution">By Jen Strickland | @inkpixelspaper</p>
+</header>
+
+<section role="article" class="slide">
+<p class="poster"><img src="images/pushbutton.png" alt="graphic of push button" /></p>
+
+<cite>NOTE: This is built for use use in Firefox, Chrome, Opera <span class="amp">&amp;</span> Safari. <br/>Use your keyboard directional arrows to advance the slides. <br/>There are no controls for iOS <span class="amp">&amp;</span> IE doesn&rsquo;t work at all.</cite>
+
+<!-- This presentation format is built based on Lea Verou's CSS3 presentation for Frontiers 2010, http://leaverou.me/ft2010/#intro - The style and content is my own, but the code is all Lea. -->
+</section>
+
+
+<section  class="slide ipp">
+<h2>About Me</h2>
+<ul>
+	<li><a href="http://inkpixelspaper.com">http://inkpixelspaper.com</a></li>
+	<li><a href="http://twitter.com/inkpixelspaper">@inkpixelspaper on Twitter</a></li>
+</ul>
+
+<p>Ink Pixels Paper is my tiny design shop, providing communication services for non-profit, small and corporate businesses &ndash; design <span class="amp">&amp;</span> production for books, collateral, signage, tradeshow graphics; interface <span class="amp">&amp;</span> experience design for applications; design <span class="amp">&amp;</span> development for websites.</p>
+
+<p style="display:none">This is my first time presenting on a web topic. I&rsquo;m a performing independent musician <span class="amp">&amp;</span> exhibiting visual artist, but&hellip; <em>frankly, I&rsquo;m still nervous!</em></p>
+</section>
+
+
+<section role="article" class="slide">
+<h2><span class="amp">Q:</span> What challenges do you face coding buttons?</h2>
+
+<ul>
+	<li class="delayed">Creation <span class="amp">&amp;</span> maintenance of images</li>
+	<li class="delayed">Internationalization <span class="amp">&amp;</span> localization</li>
+	<li class="delayed">Enhancing &ldquo;clickability&rdquo; (interaction)</li>
+	<li class="delayed">Maintaining separation of content, style <span class="amp">&amp;</span> behaviour in the code</li>
+	<li class="delayed emphasis"><strong>CSS3 offers you a solution!</strong></li>
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Why style buttons?</h2>
+<ul>
+	<li class="delayed">Make your call-to-action tantalizing. The more attention it gets, the clearer it is to the viewer what they should do.</li>
+	<li class="delayed">CSS states &ndash; active, focus, hover, visited &ndash; are useful <span class="amp">&amp;</span> create CSS hooks + opportunity for interactivity.</li>
+	<li class="delayed">BUT, just because you can, doesn&rsquo;t mean you should.</li>
+	<li class="delayed emphasis"><strong>Please, use good taste <span class="amp">&amp;</span> judgement.</strong></li>
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>What is CSS?</h2>
+<ul>
+	<li class="delayed">CSS is Cascading Style Sheets.</li>
+	<li class="delayed">CSS allows for separation of content <span class="amp">&amp;</span> style, which creates information flexibility.</li>
+	<li class="delayed">Ideally, HTML is completely useful with no style or behavior (JavaScript or CSS).</li>
+</ul>
+</section>
+
+<section role="article" class="slide">
+<h2>CSS Structure</h2>
+<p class="poster"><img src="images/css-terms.png" alt="graphic CSS selector composed of properties with values"/></p>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Basic Button Styling</h2>
+<h3>Default styles</h3>
+<form class="default_settings">
+	<ul>
+		<li><a href="#" class="link">Link</a></li>
+		<li><input type="submit" value="Submit"/></li>
+		<li><button type="submit">Button</button></li>
+	</ul>
+</form>
+<ul class="code_sample">
+	<li class="delayed">HTML: 
+<pre>
+&lt;form&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;input type="submit" value="Submit"/&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;button type="submit"&gt;Button&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/form&gt;
+</pre>
+	</li>
+	<li class="delayed">CSS: 
+		<pre>a.link	{ font-size:200%; }
+a:hover.link, a:focus.link <br/>	{ color:#fff; text-decoration:underline; }
+button, input <br/>	{ background:#fff; font-size:48px; padding:.1em .5em; }
+button:hover, input:hover, button:focus, input:focus <br/>	{ background:#444; color:#ccc; }
+button:active, input:active <br/>	{ background:#222; color:#000; }
+</pre>
+	</li>	
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Basic Button Styling</h2>
+<h3>Image buttons</h3>
+<form class="image_buttons">
+	<ul>
+		<li><a href="#" class="btnlink">Link</a></li>
+		<li><input type="submit" value="Submit" class="btnsubmit"/></li>
+		<li><button type="submit" class="btnbutton">Button</button></li>
+	</ul>
+</form>
+<ul>
+	<li class="delayed">Pros: visually interesting, consistent x-browser appearance</li>
+	<li class="delayed">Cons: inflexible to update, a lot of work to create/maintain, creating buttons for multiple languages is very resource-intensive, slower <span class="amp">&amp;</span> more bandwidth-intensive, more http requests, complex CSS, <span class="amp">&amp;</span> don&rsquo;t scale with text</li>
+</ul>
+<cite>Note: these are intentionally ugly because I don&rsquo;t think image buttons are a good way to go &mdash; my personal bias.</cite>
+
+
+</section>
+
+<section role="article" class="slide">
+<h2>CSS 2.1</h2>
+<form class="simple_css">
+	<ul>
+		<li><a href="#" class="link">Link</a></li>
+		<li><input type="submit" name="notsubmitname" value="Submit" class="submit"/></li>
+		<li><button type="submit" class="css2">Button</button></li>
+	</ul>
+</form>
+
+<p>CSS allows for color, border, backgrounds, <span class="amp">&amp;</span> text replacement.</p>
+<p><em>Technically</em>, even CSS2.1 isn&rsquo;t an approved spec.</p>
+
+</section>
+
+
+<section role="article" class="slide">
+<h2>What is CSS3?</h2>
+<ul>
+	<li class="delayed">CSS3 is the latest version of CSS, still in development by the CSS WG <span class="amp">&amp;</span> browsers.</li>
+
+	<li class="delayed">CSS3 is in varying stages of readiness. Some CSS3 is stable enough to use today while other parts are not.</li>
+
+	<li class="delayed">If you do use CSS3 (and/or HTML5) today, be sure to build in appropriate fallbacks for non-modern browsers.</li>
+
+	<li class="delayed">Order your CSS properties properly, too. Vendor prefixes followed by the non-prefixed declaration. Once the property is supported, the final one will over-ride the old ones.
+	<pre>-moz-border-radius:1em; -o-border-radius:1em; -webkit-border-radius:1em; border-radius:1em; </pre></li>
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Browser Support for CSS3</h2>
+<h3><a href="http://findmebyip.com/litmus">http://findmebyip.com/litmus</a></h3>
+<p class="poster"><img src="images/browsers_css3.jpg" alt="graphic of CSS3 browser support"/></p>
+</section>
+
+
+<section role="article" class="slide">
+<h2>What about using CSS3 today?</h2>
+<ul>
+	<li class="delayed">Many CSS3 features are ready to use today in modern browsers.</li>
+	<li class="delayed">Others can be added to browsers that do not support the tech natively using <strong>polyfills</strong> (also called shims or shivs). A polyfill, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively &mdash; flattening the API landscape (some call it Regressive Enhancement).</li>
+</ul>
+</section>
+
+<section role="article" class="slide">
+<h2>Have you ever built rounded corner buttons <em>without</em> CSS3?</h2>
+</section>
+
+<section role="article" class="slide">
+<h2>CSS3 Button Examples, a</h2>
+
+<div class="buttons">
+
+<div class="jen">
+<form id="jenbtn">
+<label for="button">Input Button: </label><input type="submit" id="button" name="button" value="Button" class="btn"/>
+</form>
+<cite>From an NDA project of mine</cite>
+</div>
+
+<!-- from Delicio.us -->
+<div class="delicious">
+<a class="delicious_btn" href="#">Edit this bookmark</a>
+<cite>Delicious Edit Bookmark Button: <a href="http://m.delicious.com/">http://m.delicious.com/</a></cite>
+</div>
+
+<div class="glowing">
+<form>
+<button type="submit" class="submit pink" name="commit">Log In</button>
+</form>
+<cite>Glowing on rollover with Google fonts - <a href="http://demo.ethn.io/login">http://demo.ethn.io/login</a></cite>
+</div>
+
+<!-- from Delicio.us -->
+<form class="lendle">
+<button type="submit" name="commit">Lendle</button>
+</form>
+<cite>Lendle for Kindle Button: <a href="http://lendle.me/coming-soon/">http://lendle.me/coming-soon/</a></cite>
+
+</div><!-- close buttons -->
+</section>
+
+<section role="article" class="slide">
+<h2>CSS3 Button Examples, b</h2>
+<div class="buttons">
+<div class="outset-colored">
+<a href="#" title="My E-Mail" class="email"><img src="images/gmail_white.png" alt="gmail icon" /><span class="site">E-Mail</span></a>
+
+<a href="http://linkedin.com" title="My LinkedIn Page" class="linkedin"><img src="images/linkedin_white.png" alt="LinkedIn icon" /><span class="site">LinkedIn</span></a>
+
+<a href="http://facebook.com" title="My Facebook Page" class="facebook"><img src="images/facebook_white.png" alt="Facebook icon" /><span class="site">Facebook</span></a>
+
+<a href="http://twitter.com" title="My Twitter Page" class="twitter"><img src="images/twitter_white.png" alt="Twitter icon" /><span class="site">Twitter</span></a>
+
+<a href="http://flickr.com" title="My Flickr Page" class="flickr"><img src="images/flickr_white.png" alt="Flickr icon" /><span class="site">Flickr</span></a>
+</div>
+
+<div class="inset">
+<a href="#"><img src="images/gmail_16.png" alt="gmail icon" /><span class="site">E-Mail</span></a>
+
+<a href="http://linkedin.com" title="My LinkedIn Page"><img src="images/linkedin_16.png" alt="LinkedIn icon" /><span class="site">LinkedIn</span></a>
+
+<a href="http://facebook.com" title="My Facebook Page"><img src="images/facebook_16.png" alt="Facebook icon" /><span class="site">Facebook</span></a>
+
+<a href="http://twitter.com" title="My Twitter Page"><img src="images/twitter_16.png" alt="Twitter icon" /><span class="site">Twitter</span></a>
+
+<a href="http://flickr.com" title="My Flickr Page"><img src="images/flickr_16.png" alt="Flickr icon" /><span class="site">Flickr</span></a>
+</div>
+
+<cite>How to Create Social Media Buttons Using CSS3 | CSS Heaven <a href="http://bit.ly/g4EPKF">http://bit.ly/g4EPKF</a></cite>
+
+
+<div class="gradient_buttons">
+	<a href="#" class="button green">Green</a> 
+	<a href="#" class="button green bigrounded">Rounded</a> 
+	<a href="#" class="button green medium">Medium</a> 
+	<a href="#" class="button green small">Small</a> 
+	<br />
+	<input class="button green" type="button" value="Input Element" /> 
+	<button class="button green">Button Tag</button>
+	<span class="button green">Span</span> 
+	<div class="button green">Div</div> 
+	<p class="button green">P Tag</p> 
+	<h3 class="button green">H3</h3>
+	<cite>CSS3 Gradient Buttons - <a href="http://www.webdesignerwall.com/demo/css-buttons.html">http://www.webdesignerwall.com/demo/css-buttons.html</a> (<a href="http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/">http://www.webdesignerwall.com/tutorials/css3-gradient-buttons/</a>)</cite>
+</div>
+
+</div><!-- close buttons div -->
+
+</section>
+
+
+<section role="article" class="slide">
+<h2>Stellar Creativity - Experimental</h2>
+<ul>
+	<li>Border-image Demos - <a href="http://www.lrbabe.com/sdoms/borderImage/">http://www.lrbabe.com/sdoms/borderImage/</a></li>
+	<li>Cascade Brewery Co - *Open Menu - <a href="http://www.cascadebreweryco.com.au/" target="_blank">http://www.cascadebreweryco.com.au/</a></li>
+	<li>Zen - HTML5 - CSS3 Audio Player - <a href="http://lab.simurai.com/ui/zen-player/">http://lab.simurai.com/ui/zen-player/</a></li>
+	<li>Sweet CSS3 Buttons - <a href="http://lab.simurai.com/css/buttons/" target="_blank">http://lab.simurai.com/css/buttons/</a></li>
+	<li>Deaxon - <a href="http://playground.deaxon.com/css/flex-nav/" target="_blank">http://playground.deaxon.com/css/flex-nav/</a></li>
+	<li>Pure CSS Post Tags - <a href="http://cssglobe.com/lab/css3_tags/01.html" target="_blank">http://cssglobe.com/lab/css3_tags/01.html</a></li>
+	<li>Button by Dan Cederholm for Typekit, <a href="http://blog.typekit.com/2011/02/10/type-study-an-all-css-button/">http://blog.typekit.com/2011/02/10/type-study-an-all-css-button/</a>, demo: <a href="http://css3exp.com/button/" target="_blank">http://css3exp.com/button/</a> </li>
+	<li>CSS3 buttons, more - <a href="http://inspectelement.com/demos/css3/buttons/">http://inspectelement.com/demos/css3/buttons/</a></li>
+	<li>More amazing buttons - <a href="http://houseofbuttons.tumblr.com/" target="_blank">http://houseofbuttons.tumblr.com/</a></li>
+	<li><a href="http://css3buttons.michaelhenriksen.dk/">"CSS3 Buttons is a simple framework for creating good-looking GitHub style button links."</a></li>
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Resources</h2>
+<ul>
+	<li>@font-face: <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Fontspring</a> and <a href="http://readableweb.com/new-font-face-syntax-simpler-easier/">http://readableweb.com/new-font-face-syntax-simpler-easier/</a></li>
+	<li>More on CSS3, from @LeaVerou: <a href="http://leaverou.me/ft2010">http://leaverou.me/ft2010</a> &ndash; cutting-edge presentation from Front Trends 2010</li>
+	<li>Selectivizr: <a href="http://selectivizr.com">http://selectivizr.com</a></li>
+	<li>Modernizr: <a href="http://www.modernizr.com/">http://www.modernizr.com/</a> is a JavaScript library that allows you to use CSS3 and HTML5 features while maintaining a fine level of control over browsers that don&rsquo;t support them yet.</li>
+	<li>CSS3Pie: <a href="http://css3pie.com/">http://css3pie.com/</a></li>
+	<li>eCSStender: <a href="http://ecsstender.org/">http://ecsstender.org/</a>
+		<ul>
+			<li>[1] <a href="http://alistapart.com/articles/stop-forking-with-css3/">http://alistapart.com/articles/stop-forking-with-css3/</a></li>
+			<li>[2] <a href="http://ecsstender.org/demos/spoon/">http://ecsstender.org/demos/spoon/</a></li>
+		</ul></li>
+	<li>Curvy Corners JavaScript to get rounded corners in IE: <a href="http://www.curvycorners.net/">http://www.curvycorners.net/</a></li>
+	<li>Head.js: <a href="http://headjs.com">http://headjs.com</a> - a script loader, a feature detector, and an HTML5 shiv/shim in just over 2kb of JavaScript</li>
+	<li>Remy Sharp&rsquo;s HTML5 shiv: <a href="http://remysharp.com/2009/01/07/html5-enabling-script/comment-page-2/">http://remysharp.com/2009/01/07/html5-enabling-script/comment-page-2/</a><br/>
+	hosted on Google <a href="http://html5shim.googlecode.com/svn/trunk/html5.js">http://html5shim.googlecode.com/svn/trunk/html5.js</a> 
+<!-- <p><strong>What is a shiv?</strong> 
+A shiv is the term used for a piece of javascript which causes Internet Explorer to properly render HTML5 elements, like the HTML5 section element.</p>
+
+<p><strong>Why is it called shiv?</strong> 
+The term shiv originates from John Resig, the creator of jQuery, who used the word as a metaphor to describe shiving support for HTML5 elements into Internet Explorer via javascript, where shiving is a slang term for a sharp object used as a knife-like weapon. There&rsquo;s also a chance that John had a moment of false etymology and meant to use the word shim, which in computing means an application compatibility workaround.</p>
+
+<p><strong>How does a shiv work?</strong> 
+A shiv works by running before the body of a page and is as simple as document.createElement('section');, which would shiv support for the HTML5 section element in Internet Explorer. The shiv can be run from a remote javascript file. There are a variety of HTML5 shiv scripts on the web which all use the document.createElement method. An important aspect of shiving that the HTML5 shiv must be executed without any errors to work. If the HTML5 shiv contains any errors, or if the shiv script is bundled with any other javascript which contains any errors, then the shiving will not work at all, and Internet Explorer will fail to display HTML5 elements correctly.</p></li> -->
+
+<li>CSS Button Maker, CSS-Tricks - <a href="http://css-tricks.com/examples/ButtonMaker/#">http://css-tricks.com/examples/ButtonMaker/#</a></li>
+<li>From The Filament Group: Styling the Button Element with CSS Sliding Doors - now with Image Sprites and IE 8 Support <a href="http://www.filamentgroup.com/lab/update_styling_the_button_element_with_css_sliding_doors_now_with_image_spr/">http://www.filamentgroup.com/lab/update_styling_the_button_element_with_css_sliding_doors_now_with_image_spr/</a></li>
+
+</ul>
+</section>
+
+
+<section role="article" class="slide">
+<h2>Thank you!</h2>
+<p>I hope you enjoyed the presentation, <span class="amp">&amp;</span> thanks for your attention.</p>
+
+<p>I prefer not to take onstage questions after my talks. Trust me, I do want to talk with you &mdash; but I believe onstage Q&amp;A is a flawed format. It forces others to sit through questions that may not be relevant. It&rsquo;s slow and awkward (&ldquo;Hold on, we&rsquo;ll get you a microphone&rdquo;). It encourages speakers to issue trite diagnosis, not truthful complexity.</p>
+
+<p>Rather than perpetuate this tired ritual, find me afterwards. <br/>
+	Let&rsquo;s talk in person &mdash; it&rsquo;s far more fun.</p>
+
+<p>Thanks, <br/>
+Jen@inkpixelspaper.com | <a href="http://twitter.com/inkpixelspaper">@inkpixelspaper</a></p>
+<cite><a href="http://sorrynoquestions.com/">http://sorrynoquestions.com/</a></cite>
+</section>
+
+<footer role="contentinfo">
+<p>Tweet this! #bostonphp #jquerymobile #css3buttons @inkpixelspaper</p>
+</footer>
+<!-- Take out these three scripts to make it work in iOS and IE. -->
+<script src="js/classList.js"></script>
+<script src="js/slideshow.js"></script>
+<script> var slideshow = new SlideShow();</script>
+
+
+</body>
+</html>

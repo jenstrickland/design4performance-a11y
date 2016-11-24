@@ -1,0 +1,42 @@
+
+@font-face {
+	/* This declaration targets Internet Explorer */
+	font-family: 'NullFreeRegular';
+	src: url('fonts/null_free-webfont.eot');
+}
+
+@font-face {
+	/* This declaration targets everything else */
+	font-family: 'NullFreeRegular';
+	src: url(//:) format('no404'), url('fonts/null_free-webfont.woff') format('woff'), url('fonts/null_free-webfont.ttf') format('truetype'), url('fonts/null_free-webfont.svg#webfontyNBi3K7y') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	/* This declaration targets Internet Explorer */
+	font-family: 'Roke1984Regular';
+	src: url('fonts/roke1984-webfont.eot');
+}
+
+@font-face {
+	/* This declaration targets everything else */
+	font-family: 'Roke1984Regular';
+	src: url(//:) format('no404'), url('fonts/roke1984-webfont.woff') format('woff'), url('fonts/roke1984-webfont.ttf') format('truetype'), url('fonts/roke1984-webfont.svg#webfontQsCmNih2') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	/* This declaration targets Internet Explorer */
+	font-family: 'KiloGramRegular';
+	src: url('fonts/kilogram_kg-webfont.eot');
+}
+
+@font-face {
+	/* This declaration targets everything else */
+	font-family: 'KiloGramRegular';
+	src: url(//:) format('no404'), url('fonts/kilogram_kg-webfont.woff') format('woff'), url('fonts/kilogram_kg-webfont.ttf') format('truetype'), url('fonts/kilogram_kg-webfont.svg#webfontGnTmYocZ') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

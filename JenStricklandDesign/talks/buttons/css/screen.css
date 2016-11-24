@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------------------
+
+Big
+Block of comments
+
+----------------------------------------------------------------------------------------*/
+@import 'imported.css';
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: normal;
+  src: url('../../examples/fonts/Comfortaa_Regular');
+}
+@font-face {
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  src: url('../../examples/fonts/Comfortaa_Bold');
+}
+
+@page {
+  margin: 3cm;
+}
+@page :right {
+  border: 1px solid;
+	@bottom-right {
+    content: counter( page, lower-roman );
+    font-size: 10px;
+    padding: 2em 0;
+    text-align: right;
+    vertical-align: top;
+  }
+  margin: 5cm;
+}
+@page :right {
+  margin: 6cm;
+}
+@page CompanyLetterHead:first {
+	margin: 3cm;
+}
+
+@-hyphenated-extended-at-with-keys key-1, key-2 {
+  property-1: value-1;
+  property-2: value-2;
+}
+@-hyphenated-extended-at-with-keys key-3 {
+  property-3: value-3;
+  property-4: value-4;
+}
+@-hyphenated-extended-at-with-keys key-3 {
+  property-3: value-5;
+}
+@unhyphenated-extended-at {
+  property-1: value-1;
+  property-2: value-2;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  padding: 10px 0 0 10px;
+} /* comment */
+h1 {
+  font-family: Comfortaa, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#content {
+  width: 60%;
+  float: left;
+  position: relative;
+}
+#sidebar {
+  background: #ccc;
+  border-radius: 10px 5px 20px 10px / 0.5;
+  margin: 0 10px;
+  padding: 10px 20px;
+  width: 30%;
+  float: right;
+  position: relative;
+  -easy-extended-property: foo;
+}
+tr:nth-child(even) {
+  background-color: #ccc;
+}
+tr:nth-child(odd) {
+  background-color: #666;
+}
+
+@media handheld {
+  p {
+    font-weight: bold;
+  }
+}
