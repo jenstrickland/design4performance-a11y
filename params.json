@@ -1,6 +1,6 @@
 {
   "name": "Design4performance-a11y",
-  "tagline": "Prioritize Performance and Accessibility from the Beginning of your Project",
-  "body": "### Prioritize Performance and Accessibility from the Beginning of your Project\r\nToo often projects optimize performance and add-on accessibility in the development phase. Design decisions might make it necessary to bloat (read slow) a project with extra JavaScript to make a design accessible. \r\n\r\nThis design process leverages a \"design in the browser\" methodology, incorporating accessible solutions, and QA'ing for accessibility and performance at regular intervals. Marcy Sutton wrote about how sites with performance issues are often nightmares for accessibility in her post, [Accessibility and Performance](https://marcysutton.com/accessibility-and-performance/).",
+  "tagline": "Prioritize Performance & Accessibility at the Beginning",
+  "body": "### Prioritize Performance & Accessibility at the Beginning\r\nToo often projects optimize performance and add-on accessibility in the development phase. Design decisions might make it necessary to bloat (read slow) a project with extra JavaScript to make a design accessible. \r\n\r\nThis design process leverages a \"design in the browser\" methodology, incorporating accessible solutions, and QA'ing for accessibility and performance at regular intervals. Marcy Sutton wrote about how sites with performance issues are often nightmares for accessibility in her post, [Accessibility and Performance](https://marcysutton.com/accessibility-and-performance/).",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
