@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>CSSS: A brief introduction</title>
+	<title>Design for Performance &amp; Accessibility</title>
 	
 	<link href="slideshow.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
@@ -12,225 +12,182 @@
 </head>
 <body data-duration="10">
 
+
 <header id="intro" class="slide">
 	<h1>
-		<object data="logo.svg" width="100%" type="image/svg+xml">
-			<img src="logo.png" alt="CSSS: CSS-based SlideShow System" />
-		</object>
+    	Design for Performance <span class="amp">&amp;</span>&nbsp;Accessibility
+
 	</h1>
-	<p class="attribution">By Lea Verou</p>
+	<p class="attribution">By Jen Strickland</p>
 </header>
+
+
 <section>
-	<header class="slide">
-		<h1>Introduction</h1>
-	</header>
-	
-	<section class="slide" title="CSSS: Introduction">
-		<h2>What is it?</h2>
-		<p>A simple framework for building presentations with modern web standards</p>
-		<ul>
-			<li class="delayed">An HTML file contains the whole presentation</li>
-			<li class="delayed">Themes as CSS files</li>
-			<li class="delayed">JavaScript handles what CSS can't (keyboard shortcuts etc)</li>
-		</ul>
-	</section>
-	
+
 	<section class="slide">
-		<h2>History</h2>
-		<ul>
-			<li class="delayed">I had to create a presentation for my talk at <a href="http://front-trends.com">Front Trends 2010</a></li>
-			<li class="delayed">The only web-based presentation systems I knew of didn't fit my needs</li>
-			<li class="delayed">&hellip;so I rolled up my own</li>
-			<li class="delayed">FT2010 attendees asked me to release it</li>
-			<li class="delayed">and here it is! ;-)</li>
+		<h2>When do you think about performance and&nbsp;accessibility?</h2>
+        <ul>
+			<li class="delayed">
+              Many teams optimize performance and add accessibility accommodations in the development phase &mdash; after stakeholder sign-off.
+              <img src="img/process.gif" alt="graphic showing five stages of a project process, idea, design, development, QA, and launch - with performance and accessibility as priorities in development phase" />
+            </li>
+			<li class="delayed">At this point, the dev team is on the hook for design decisions which may not optimally balance performance and aesthetics, nor consider the experience for users of assistive technology.</li>
 		</ul>
+
 	</section>
-	
-	<section class="slide" id="navigation">
-		<h2>Navigation</h2>
-		<p>Only through keyboard for now :(</p>
+    
+    <section class="slide">
+    	<h2>Accessibility <span class="amp">&amp;</span> Performance? Really?</h2>
+        
+        <ul>
+        	<li class="delayed">In my experience&hellip; this presentation is based on my nearly two decades of online design.</li>
+            <li class="delayed">Marcy Sutton actually quantified it, in presentations and <a href="https://marcysutton.com/accessibility-and-performance/">a blog post</a>. <img src="img/marcy.jpg" alt="graphic of the title slide of a presentation by Marcy Sutton at Fronteers Conference in April 2016" /></li>
+        </ul>
+        
+    </section>
+
+    <section class="slide">
+    	<h2>Accessibility <span class="amp">&amp;</span> Performance? Really?</h2>
+        <p>TL;DR</p>
+        <ul>
+            <li class="delayed">People rely on keyboards and AT to interact with the web. Provide basic accessibility support, before tuning performance. Start there.</li>
+            <li class="delayed">Every repaint introduces difficulty for accessibility&hellip;<br/> and a performance hit. </li>
+            <li class="delayed">The longer it takes to load and render a site, the delay is even greater for AT users, so optimize assets.</li>
+        </ul>
+        
+    </section>
+
+    <section class="slide">
+    	<h2>Accessibility <span class="amp">&amp;</span> Performance? Really?</h2>
+        <p>Bonus: it&rsquo;s more efficient and cost-effective to have accessibility figured out before development or launch, opposed to hacking add-on&rsquo;s or addressing a lawsuit.</p>
+        <p>A great experience is performant, usable, and ought to be so for all.</p>     
+    </section>
+
+	<section class="slide">
+		<h2><span class="shift_left">Shift Left:</span> Prioritize Performance <span class="accessibility"><span class="amp">&amp;</span>&nbsp;Accessibility</span> from the Start</h2>
+        <img src="img/shift_left.gif" alt="graphic showing five stages of a project process, idea, design, development, QA, and launch - with performance and accessibility as priorities in design phase" />
 		<ul>
-			<li>→ or ↓ to advance to the next slide or incrementally displayed item</li>
-			<li>← or ↑ to go to the previous slide or incrementally displayed item</li>
-			<li>Ctrl* + → or Ctrl* + ↓ to jump to the next slide</li>
-			<li>Ctrl* + ← or Ctrl* + ↑ to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li>Ctrl* + G to jump to an arbitrary slide (by slide number or identifier)</li>
+			<li class="delayed">Business requirements include performance and accessibility</li>
+			<li class="delayed">Indicate metrics for launch</li>
+			<li class="delayed">Design experience with performance and accessibility as priorities</li>
 		</ul>
-		<p>* Ctrl or Shift actually. Only Shift works in Opera.</p>
-	</section>
 </section>
 
 <section>
-	<header class="slide">
-		<h1>Features</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Thumbnail view</h2>
-		<p>Press Ctrl+H (or Shift+H if you're in Opera) now.</p>
-		<p class="delayed">Cool, huh? You can press Ctrl+Shift+H to see all slides (warning: can be slow!)</p>
-	</section>
-	
-	<section class="slide">
-		<h2>Timer</h2>
+
+	<section class="slide" title="">
+		<h2><span class="shift_left">Shift Left:</span> A Process</h2>
+        
+        <p>This talk outlines a design process prioritizing performance and accessibility from the beginning of your project, including:</p>
+		
 		<ul>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code></li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
+			<li class="delayed">&ldquo;Design in the browser&rdquo; methodology</li>
+			<li class="delayed">QA for accessibility and performance throughout</li>
+			<li class="delayed">Specs provided for design and accessibility</li>
+            <li class="delayed">Test constantly &mdash; <em>can&rsquo;t stress this enough</em></li>
 		</ul>
 	</section>
 	
 	<section class="slide">
-		<h2>Presenter view</h2>
-		<p>This slide has presenter notes. They are only visible in presenter view (Ctrl+P or Shift+P).</p>
-		<p class="presenter-notes">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-	
-	<section class="slide">
-		<style scoped>
-			h2 {
-				font-size: 200%;
-				font-weight: bold;
-			}
-		</style>
-		<h2><code>&lt;style scoped /&gt;</code></h2>
-		<p>You can use the HTML5 <code>scoped</code> attribute on style elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, inspect this slide and then run <code>$$('style[scoped]')[0].sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
-	</section>
-	
-	<section class="slide">
-		<h2>More features</h2>
+		<h2><span class="shift_left">Shift Left:</span> Getting Started</h2>
+        <p>&ldquo;Design in the browser&rdquo; methodology</p>
 		<ul>
-			<li class="delayed">IDs are dynamically assigned by JavaScript&hellip;</li>
-			<li class="delayed">&hellip;but you can also assign your own, bringing the best of both worlds</li>
-			<li class="delayed">Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li class="delayed">Slide scaling based on window size (size everything you want to be scalable in ems)</li>
-			<li class="delayed">Document.title changing according to slide title (fetched either from the <code>title</code> attribute or the slide's heading)</li>
+			<li class="delayed">Semantic hierarchy for content
+            	<pre style="display:block;">
+&lt;h1&gt;First Level Heading&lt;/h1&gt;
+ &lt;h2&gt;Second Level Heading&lt;/h2&gt;
+  &lt;p&gt;Admittedly, a simplistic example.&lt;/p&gt;
+                </pre>
+            </li>
 		</ul>
 	</section>
 	
 	<section class="slide">
-		<h2>Drawbacks</h2>
+		<h2><span class="shift_left">Shift Left:</span> Getting Started</h2>
+        <p>&ldquo;Design in the browser&rdquo; methodology</p>
 		<ul>
-			<li>Only supports modern browsers. Why?
-				<ul>
-					<li>More lightweight</li>
-					<li>Easier to understand code</li>	
-					<li>It's a presentation, so the environment is controlled anyway</li>
-				</ul>
-			</li>
-			<li>No mouse click to advance to the next slide. I consider it annoying.</li>
-			<li>Doesn't work in mobile :(</li>
+			<li class="delayed">Include accessibility in the code<br>
+				(within designer&rsquo;s ability &mdash; <em>always be learning</em>)
+                <pre style="display:block;">
+&lt;form&gt;
+ &lt;label for="sample"&gt;Label&lt;/label&gt;
+ &lt;input type="text" id="sample" name="sample" /&gt;
+&lt;/form&gt;
+                </pre>
+                </li>
+			<li class="delayed">Native elements for interaction
+            	<form>
+                	<label for="sample">Label</label>
+                    <input type="text" id="sample" name="sample" />
+                </form>
+            </li>
 		</ul>
-	</section>
+    </section>
+
+	<section class="slide">
+		<h2><span class="shift_left">Shift Left:</span> Getting Started</h2>
+        <p>QA for accessibility and performance throughout</p>
+        <ul>
+        	<li class="delayed">Validate design using accessibility tools</li>
+			<li class="delayed">Weigh the aesthetic and performance value</li>
+            <li class="delayed">Test constantly, on many devices, using a variety of connections</li>
+			<li class="delayed">Use tools to evaluate design decision impact</li>
+		</ul>
+	</section>	
+
+	<section class="slide">
+		<h2><span class="shift_left">Shift Left:</span> Testing Tools</h2>
+		<ul>
+			<li class="webpagetest">WebPagetest</li>
+			<li class="yslow">YSlow</li>
+			<li class="devtools">Developer Tools</li>
+            <li>W3C Validator</li>
+
+		</ul>
+	</section>	
+
+	<section class="slide">
+		<h2><span class="shift_left">Shift Left:</span> Accessibility Resources</h2>
+		<ul class="a11y_resources">
+        	<li class="wcag">
+                <a href="resources/WCAG_Checklist.pdf"><img src="img/wcag_checklist.jpg" alt="screenshot of a WCAG compliance checklist" /></a>
+            	WCAG Checklist
+            </li>
+            <li class="considerations">
+                <a href="resources/Design_Considerations.pdf"><img src="img/deque_disability_considerations.jpg" alt="screenshot of disability considerations from Deque" /></a>
+            	Deque&rsquo;s Disability Considerations
+            </li>
+            <li class="personas">
+                <a href="resources/UserStories.pdf"><img src="img/user_stories.jpg" alt="screenshot of user stories for users with disabilities" /></a>
+            	User Stories
+            </li>
+        </ul>
+	</section>	
+
+	<section class="slide">
+		<h2><span class="shift_left">Shift Left:</span> Accessibility Resources</h2>
+		<ul class="">
+			<li class="webaim">WebAIM Color Contrast Checker</li>
+			<li class="wave">WAVE Web Accessibility Tool</li>
+			<li class="voiceover">Voiceover (Mac) or WAVE (PC)</li>
+			<li class="axe">Deque&rsquo;s aXe <!-- https://www.deque.com/products/axe/ --></li>
+        </ul>
+	</section>	
+
 </section>
 
-<section>
-	<header class="slide">
-		<h1>Plugins</h1>
-	</header>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Snippets</h2>
-		<pre>new CSSSnippet(document.getElementById('snippet'));</pre>
-		<ul>
-			<li>Dynamically edit CSS and reflect the results in any element's style
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed
-				<ul>
-					<li>Also does it with the style attribute (statically) if the element is not a text field (doesn't work in IE and Firefox 3.6)</li>
-				</ul>
-			</li>
-			<li>Textarea automatically adjusts rows/font-size on line break (use class <code>dont-adjust</code> to turn off)</li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>CSS Snippets demo</h2>
-		<p>Edit the following CSS code:</p>
-		<textarea class="snippet">background-color:red;
-background-image: linear-gradient(red, #600)</textarea>
-	</section>
-	
-	<section class="slide" id="animation-demo">
-		<h2>CSS Snippets: raw CSS</h2>
-		<textarea class="snippet" data-raw>@keyframes rainbow {
-	from, to { background: red }
-	16% { background: yellow }
-	33% { background: green }
-	50% { background: aqua }
-	66% { background: blue }
-	83% { background: fuchsia }
-}
 
-#animation-demo { animation: 30s rainbow infinite; }</textarea>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: CSS Controls</h2>
-		<ul>
-			<li>Use sliders and other controls to adjust CSS values
-				<ul>
-					<li>Which one? Specify a selector with the <code>data-subject</code> attribute or leave blank for the slide to be the subject</li>
-					<li>Specify style with <code>data-style</code> (use <code>{value}</code> where the result will be)</li>
-				</ul>
-			<li>Automatically prefixes CSS3 properties/values, when needed</li>
-		</ul>
-	</section>
-	
-	<section class="slide" id="css-controls-demo">
-		<h2>CSS Controls demo</h2>
-		<label>Slide lightness: 
-			<input type="range" min="0" max="255" value="128" data-style="background-color:rgb({value}, {value}, {value});" class="css-control" />
-		</label>
-		<label>
-			border-width:
-			<input type="number" min="0" max="60" value="30" data-style="border-width: {value}px;" class="css-control" size="5" />
-		</label>
-		<label>
-			font-family:
-			<select data-style="font-family: {value};" class="css-control">
-				<option selected>sans-serif</option>
-				<option>Georgia, serif</option>
-				<option>Consolas, monospace</option>
-				<option>'Trebuchet MS', sans-serif</option>
-			</select>
-		</label>
-	</section>
-	
-	<section class="slide">
-		<h2>Plugin: Code highlight</h2>
-		<ul>
-			<li>Syntax highlighting for every <code>&lt;code&gt;</code> element with a <code>lang</code> attribute.</li>
-			<li>Only highlights when the slide becomes active, for performance</li>
-			<li>Currently only supports JavaScript, but it's easy to add any language</li>
-			<li>Styling done through easy to understand classes like <code>.string</code> or <code>.comment</code></li>
-		</ul>
-	</section>
-	
-	<section class="slide">
-		<h2>Code highlight example</h2>
-		<pre><code lang="javascript">// Comment
-document.addEventListener('DOMAttrModified',function(e) {
-  var node = e.target, attr = e.attrName;
-  if(/^input$/i.test(node.nodeName) 
-    &amp;&amp; (attr === 'placeholder' || attr === 'value')
-    || foo > 5)
-      Placeholder.update(node);
-}, false);</code></pre>
-	</section>
-</section>
 <footer class="slide" title="The End">
 	<h2>Thank you!</h2>
-	<p>Get it or contribute at <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></p>
+	<p>JenStrickland.design, @inkpixelspaper</p>
 	<p>Credits:</p>
-	<ul>
-		<li><a href="http://lukeroberts.us/2008/12/wallpaper-colourful-wood/">Colored wood background by Luke Roberts</a></li>
-		<li>The name CSSS is actually inspired by S5, as you could probably guess ;-)</li>
-		<li>A big thanks to the community at Github for various contributions to this project</li>
+	<ul class="credits">
+		<li><a href="http://lea.verou.me/csss/sample-slideshow.html#intro">Lea Verou slideshow</a></li>
+		<li class="">Marcy Sutton documented how performance issues are often nightmares for accessibility, <a href="https://marcysutton.com/accessibility-and-performance/">Accessibility and Performance</a>.</li>
+		<li class="">Lara Hogan wrote a book, <a href="http://larahogan.me/design/">Designing for Performance</a>.</li>
+		<li class="">Tim Kadlec produces a podcast dedicated to making websites faster, <a href="https://pathtoperf.com/">The Path to Performance</a>.</li>
+		<li class=""><a href="http://www.perf-tooling.today/">Performance Tooling Today</a> is a collection of resources to improve workflow and site performance.</li>
+		<li class="">John Foliot of <a href="http://www.deque.com/">Deque</a> is my helpful accessibility guru.</li>
 	</ul>
 </footer>
 

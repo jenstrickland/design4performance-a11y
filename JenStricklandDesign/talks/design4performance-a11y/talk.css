@@ -1,26 +1,60 @@
 #intro {
-	background: rgba(0,0,0,.7);
-	padding: 0;
-	border: 0;
 }
 
 #intro h1 {
-	width: 60%;
-	min-height: 500px;
-	margin: 5% auto 0;
+	font-size:300%;
+	line-height:1.2;
+	min-height: 50px;
+	margin:0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 2em;
+	text-align: right; 
+	text-shadow:-10px 0 10px rgba(0,114,206,.15);
 }
 
 #intro .attribution {
-	font-family: Helvetica, sans-serif;
-	font-weight: bold;
-	text-align: center;
-	font-size: 100%;
+	font-family: "museo-sans-1","museo-sans-2",sans-serif; 
+	font-weight: normal;
+	text-align: right;
+	font-size: 70%;
 	line-height: .3;
-	color: rgba(0,0,0,.7);
 	text-shadow: none;
-	background: url(img/rainbow-wood.jpg) bottom;
-	padding:.6em 0 0;
-	overflow: hidden;
+	padding:.6em 0;
+	overflow: hidden; 
+}
+
+.amp {
+	font-family: Baskerville, Palatino, "Book Antiqua", serif; 
+	font-style: italic; 
+	font-weight: normal; 
+	line-height: 0;
+}
+
+.slide img { 
+	display:block; 
+	margin:1em auto; 
+	max-width:600px;
+	width:70%;
+}
+
+.slide .a11y_resources li {
+	display:inline-block;
+	font-size:.9em;
+	line-height:1.1;
+	text-align:center;
+	vertical-align:top;
+	width:30%;
+}
+
+.slide .a11y_resources img {
+	max-width:290px;
+}
+
+.slide .credits li {
+	font-size:.8em;
+	font-weight:normal;
 }
 
 
@@ -30,12 +64,27 @@
 
 @media only screen and (-webkit-min-device-pixel-ratio:0) {
 /* hack to avoid using the Object element in Safari/WebKit, due to WebKit Bug 27190 */
-	object[type="image/svg+xml"] {
+	/* object[type="image/svg+xml"] {
 		display: none;
-	}
-	
-	#intro h1 {
-		background: url(logo.svg) no-repeat center;
-		background-size:100% auto;
-	}
+	} */
+
+}
+
+/* .yslow { background-image:url(img/yslow.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
+.webaim { background-image:url(img/webaim_colorcontrastchecker.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
+.wave { background-image:url(img/WAVE_Web_Accessibility_Tool.png); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
+.devtools { background-image:url(img/Dev_tools.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
+.voiceover { background-image:url(img/voiceover.png); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
+.axe { background-image:url(img/axe.png); background-size:6%; background-repeat:no-repeat; padding-left:50px; }
+.webpagetest { background-image:url(img/webpagetest.gif); background-size:6%; background-repeat:no-repeat; padding-left:50px; } */
+
+.slide h2 span.shift_left { color:rgb(12,78,113); font-family:"museo-slab-1","museo-slab-2",serif; font-size:105%; } /* #0c4e71 */ /* orange rgb(252,152,62) #fc983e */
+
+em { font-style:italic; }
+
+
+
+form input { 
+	background: #f6f6f6;
+	padding:.25em;
 }
