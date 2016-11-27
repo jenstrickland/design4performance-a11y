@@ -70,20 +70,10 @@
 
 }
 
-/* .yslow { background-image:url(img/yslow.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
-.webaim { background-image:url(img/webaim_colorcontrastchecker.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
-.wave { background-image:url(img/WAVE_Web_Accessibility_Tool.png); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
-.devtools { background-image:url(img/Dev_tools.jpg); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
-.voiceover { background-image:url(img/voiceover.png); background-size:15%; background-repeat:no-repeat; padding-left:100px; }
-.axe { background-image:url(img/axe.png); background-size:6%; background-repeat:no-repeat; padding-left:50px; }
-.webpagetest { background-image:url(img/webpagetest.gif); background-size:6%; background-repeat:no-repeat; padding-left:50px; } */
-
 .slide h2 span.shift_left { color:rgb(12,78,113); font-family:"museo-slab-1","museo-slab-2",serif; font-size:105%; } /* #0c4e71 */ /* orange rgb(252,152,62) #fc983e */
 
 em { font-style:italic; }
-
-
-
+small { font-size:50% !important; }
 form input { 
 	background: #f6f6f6;
 	padding:.25em;
